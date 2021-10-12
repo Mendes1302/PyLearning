@@ -17,5 +17,29 @@ namespace PyLearning
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 intro = new Form2();
+            intro.Show();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 creditos = new Form3();
+            creditos.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 quiz = new Form4();
+            quiz.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form5 manual = new Form5();
+            manual.Show();
+        }
     }
 }

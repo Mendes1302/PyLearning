@@ -57,4 +57,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Instalação Python
+Muitos PCs e Macs já terão o Python instalado.
+Para verificar se você tem o Python instalado em um PC com Windows, procure Python na barra inicial ou execute o seguinte na linha de comando (cmd.exe):
+C: \ Usuários \ Seu nome&gt; python --version
+Para verificar se você tem o Python instalado em um Linux ou Mac, abra a linha de comando no Linux ou no Mac abra o Terminal e digite:
+python –version
+Se você descobrir que não tem o Python instalado em seu computador, poderá baixá-lo gratuitamente no seguinte site: https://www.python.org/
+
+Começo Rápido
+Python é uma linguagem de programação interpretada, o que significa que, como desenvolvedor, você escreve arquivos Python (.py) em um editor de texto e, em seguida, coloca esses arquivos no interpretador Python para serem executados.
+
+A maneira de executar um arquivo Python é assim:
+C: \ Usuários \ “Seu nome”&gt; python olamundo.py
+Onde "olamundo.py" é o nome do seu arquivo Python.
+Vamos escrever nosso primeiro arquivo Python, chamado olamundo.py, que pode ser feito em qualquer editor de texto:
+print ("Olá, Mundo!")
+Simples assim. Salve seu arquivo. Abra sua linha de comando, navegue até o diretório onde você salvou o arquivo e execute deve sair: Olá Mundo!
+Parabéns, você escreveu e executou seu primeiro programa Python.
+Para testar uma pequena quantidade de código em Python, às vezes é mais rápido e fácil não escrever o código em um arquivo. Isso é possível porque o Python pode ser executado como uma linha de comando.
+Digite o seguinte na linha de comando do Windows, Mac ou Linux:
+C: \ Usuários \ Seu nome&gt; python
+Ou, se o comando "python" não funcionar, você pode tentar "py":
+C: \ Usuários \ Seu nome&gt; py
+A partir daí, você pode escrever qualquer Python, incluindo nosso exemplo olá mundo no início do tutorial: print ("Olá, Mundo!"), que respondera "Olá, mundo!" na linha de comando. Sempre que terminar na linha de comando do Python, você pode simplesmente digitar o seguinte para sair da interface: exit()
+</value>
+  </data>
 </root>

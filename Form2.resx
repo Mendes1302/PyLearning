@@ -57,4 +57,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Você está pensando em ser um Programador e não sabe por onde começar? Pois vamos te dar todas as informações e mostrar o caminho a seguir.
+Segundo um levantamento feito pela Code.org, em menos de 10 anos, serão necessários 1 milhão e 400 mil programadores no mercado de trabalho, mas se tudo continuar nesse ritmo, teremos apenas 400 mil formados. Isso representa uma deficiência de 1 milhão de profissionais na área em menos de uma década.
+A programação é necessária em vários segmentos atualmente, seja em dispositivos computacionais tradicionais, em portáteis, eletrodomésticos inteligentes, vestíveis, realidade aumentada, realidade virtual e aparelhos da Internet das Coisas (IoT).
+Um bom programador consegue resolver problemas de forma mais rápida, é mais criativo, tem espírito de comunidade e aprende as coisas mais rápido.
+E é uma grande MENTIRA dizer que para saber programar é preciso aprender Inglês ou ser um expert em Matemática. Isso tudo é uma LENDA!
+O ramo de programação não escolhe idade, sexo, condição financeira ou área de especialização. Todos podem aprender a programar, até mesmo aqueles que acham que são novos demais, velhos demais, moram muito longe ou não são de áreas relacionadas com Tecnologia.
+</value>
+  </data>
 </root>
