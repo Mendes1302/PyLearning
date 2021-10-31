@@ -41,5 +41,11 @@ namespace PyLearning
             Form5 manual = new Form5();
             manual.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form6 tutorial = new Form6();
+            tutorial.Show();
+        }
     }
 }

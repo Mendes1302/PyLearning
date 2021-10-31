@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PyLearning
 {
-    public partial class Form3 : Form
+    public partial class Form6 : Form
     {
-        public Form3()
+        public Form6()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
