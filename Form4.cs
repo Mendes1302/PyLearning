@@ -22,11 +22,19 @@ namespace PyLearning
                               "8) E possível diferenciar variáveis só mudando de letra minúscula e maiúscula?",
                               "9) Uma variável criada fora de uma função ela é global?",
                               "10) É possível criar uma variável de mesmo nome uma global e outra em uma função?",
-                              "11) É possível converter um tipo numérico pra outro?"
+                              "11) É possível converter um tipo numérico pra outro?",
+                              "12) Para imprimir em letras maiúsculas um texto utiliza-se:",
+                              "13) Para imprimir em letras minúsculas um texto utiliza-se:",
+                              "14) Para remover espaço em branco em um texto utiliza-se:",
+                              "15) Para substituir uma letra por outra em um texto utiliza-se:",
+                              "16) Para combinar texto e número precisa usar o método format()?",
+
+
+
         };
 
         //matriz linha por coluna (linha = questoes, coluna = radio)
-        string[,] radio = new string[12,3] { { "Imprimir uma mensagem", "Copiar algo da tela", "" },
+        string[,] radio = new string[17,3] { { "Imprimir uma mensagem", "Copiar algo da tela", "" },
                                             { "Verdadeiro",            "Falso",                "" },
                                             { "Verdadeiro",            "Falso",                "" },
                                             { "o python não responde", "da um erro no python", "Nenhuma das alternativas anteriores"},
@@ -37,7 +45,13 @@ namespace PyLearning
                                             { "Verdadeiro",            "Falso",                "" },
                                             { "Verdadeiro",            "Falso",                "" },
                                             { "Verdadeiro",            "Falso",                "" },
+                                            { "upper",            "lower",                "" },
+                                            { "upper",            "lower",                "" },
+                                            { "replace",            "strip",                "split" },
+                                            { "replace",            "strip",                "split" },
                                             { "Verdadeiro",            "Falso",                "" }
+                                            { "upper",            "lower",                "" }
+
         };
 
         int[] respostas = {0,0,0,0,0,0,0,0,0,0,0,0};
@@ -72,19 +86,45 @@ namespace PyLearning
                 respostas[counter - 1] = controle;
             }
 
+            if(counter>0)
+            {
+                if(radio_a.Checked == false && radio_b.Checked == false && radio_c.Checked == false)
+                {
+
+                    MessageBox.Show("É Preciso escolher uma resposta para continuar");
+                }
+                
+                    
+            }
+
+
+
+
+
             if (counter == 1 || counter == 2 || counter == 3 || counter == 5 || counter == 6 || counter == 8 || counter == 9 || counter == 10 || counter == 11)
             {
                 if (radio_a.Checked)
                 {
                     MessageBox.Show("Resposta correta");
                 }
-                else 
+                else if (radio_b.Checked) 
                 {
                     MessageBox.Show("Resposta errada");
                 }
             }
-            
 
+
+            if (counter == 4)
+            {
+                if (radio_b.Checked)
+                {
+                    MessageBox.Show("Resposta correta");
+                }
+                else
+                {
+                    MessageBox.Show("Resposta errada");
+                }
+            }
 
             button1.Text = "Próximo";
             questao.Visible = true;
@@ -118,17 +158,21 @@ namespace PyLearning
             counter++;
 
 
-
             if (counter == 11)
             {
-                label1.Text = "Parabéns, você chegou ao fim do Quiz";
                 questao.Visible = false;
-                gabarito.Visible = true;
-               // gabarito.Text = 
+                gab.Visible =true;
+                acer.Visible = true;
+                erro.Visible = true;
+                label1.Text = "Parabéns, você chegou ao fim do Quiz";
+                gab.Text = "A porcentagem de acertos foi:";
+                acer.Text = "Acertos foram :";
+                erro.Text = "Seus Erros :";
+                radio_a.Visible = false;
                 radio_b.Visible = false;
                 radio_c.Visible = false;
 
-                counter = 0;
+               // counter = 0;
             }
 
         }

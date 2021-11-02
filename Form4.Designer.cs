@@ -37,6 +37,9 @@ namespace PyLearning
             this.label1 = new System.Windows.Forms.Label();
             this.gabarito = new System.Windows.Forms.RichTextBox();
             this.acerto = new System.Windows.Forms.Label();
+            this.erro = new System.Windows.Forms.Label();
+            this.acer = new System.Windows.Forms.Label();
+            this.gab = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // radio_a
@@ -109,6 +112,7 @@ namespace PyLearning
             // 
             this.gabarito.BackColor = System.Drawing.SystemColors.Control;
             this.gabarito.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gabarito.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gabarito.Location = new System.Drawing.Point(12, 84);
             this.gabarito.Name = "gabarito";
             this.gabarito.Size = new System.Drawing.Size(363, 128);
@@ -125,11 +129,47 @@ namespace PyLearning
             this.acerto.Size = new System.Drawing.Size(0, 28);
             this.acerto.TabIndex = 7;
             // 
+            // erro
+            // 
+            this.erro.AutoSize = true;
+            this.erro.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.erro.Location = new System.Drawing.Point(25, 184);
+            this.erro.Name = "erro";
+            this.erro.Size = new System.Drawing.Size(65, 28);
+            this.erro.TabIndex = 8;
+            this.erro.Text = "label2";
+            this.erro.Visible = false;
+            // 
+            // acer
+            // 
+            this.acer.AutoSize = true;
+            this.acer.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.acer.Location = new System.Drawing.Point(25, 139);
+            this.acer.Name = "acer";
+            this.acer.Size = new System.Drawing.Size(65, 28);
+            this.acer.TabIndex = 9;
+            this.acer.Text = "label3";
+            this.acer.Visible = false;
+            // 
+            // gab
+            // 
+            this.gab.AutoSize = true;
+            this.gab.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gab.Location = new System.Drawing.Point(25, 96);
+            this.gab.Name = "gab";
+            this.gab.Size = new System.Drawing.Size(65, 28);
+            this.gab.TabIndex = 11;
+            this.gab.Text = "label5";
+            this.gab.Visible = false;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 401);
+            this.Controls.Add(this.gab);
+            this.Controls.Add(this.acer);
+            this.Controls.Add(this.erro);
             this.Controls.Add(this.acerto);
             this.Controls.Add(this.gabarito);
             this.Controls.Add(this.radio_c);
@@ -155,5 +195,8 @@ namespace PyLearning
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox gabarito;
         private System.Windows.Forms.Label acerto;
+        private System.Windows.Forms.Label erro;
+        private System.Windows.Forms.Label acer;
+        private System.Windows.Forms.Label gab;
     }
 }
