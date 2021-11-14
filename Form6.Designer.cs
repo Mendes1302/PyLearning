@@ -29,7 +29,6 @@ namespace PyLearning
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -40,7 +39,7 @@ namespace PyLearning
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(776, 341);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.Text = "";
             // 
             // Form6
             // 
@@ -49,7 +48,9 @@ namespace PyLearning
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.richTextBox1);
             this.Name = "Form6";
-            this.Text = "Form6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tutorial";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

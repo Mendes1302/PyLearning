@@ -67,7 +67,8 @@ namespace PyLearning
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "Form5";
-            this.Text = "Form5";
+            this.Text = "Manual de Instalação";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

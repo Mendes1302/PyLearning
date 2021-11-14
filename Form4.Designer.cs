@@ -1,7 +1,7 @@
 ﻿
 namespace PyLearning
 {
-    partial class Form4
+    partial class Quiz
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace PyLearning
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quiz));
             this.radio_a = new System.Windows.Forms.RadioButton();
             this.radio_b = new System.Windows.Forms.RadioButton();
             this.questao = new System.Windows.Forms.RichTextBox();
@@ -40,12 +41,14 @@ namespace PyLearning
             this.erro = new System.Windows.Forms.Label();
             this.acer = new System.Windows.Forms.Label();
             this.gab = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // radio_a
             // 
             this.radio_a.AutoSize = true;
-            this.radio_a.Location = new System.Drawing.Point(12, 237);
+            this.radio_a.Location = new System.Drawing.Point(12, 365);
             this.radio_a.Name = "radio_a";
             this.radio_a.Size = new System.Drawing.Size(14, 13);
             this.radio_a.TabIndex = 1;
@@ -56,7 +59,7 @@ namespace PyLearning
             // radio_b
             // 
             this.radio_b.AutoSize = true;
-            this.radio_b.Location = new System.Drawing.Point(12, 269);
+            this.radio_b.Location = new System.Drawing.Point(12, 405);
             this.radio_b.Name = "radio_b";
             this.radio_b.Size = new System.Drawing.Size(14, 13);
             this.radio_b.TabIndex = 2;
@@ -66,20 +69,23 @@ namespace PyLearning
             // 
             // questao
             // 
+            this.questao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.questao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.questao.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.questao.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.questao.Location = new System.Drawing.Point(1, 84);
+            this.questao.Location = new System.Drawing.Point(25, 170);
             this.questao.Name = "questao";
             this.questao.ReadOnly = true;
             this.questao.Size = new System.Drawing.Size(835, 147);
             this.questao.TabIndex = 3;
             this.questao.Text = "";
             this.questao.Visible = false;
+            this.questao.TextChanged += new System.EventHandler(this.questao_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(701, 324);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(972, 402);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 65);
             this.button1.TabIndex = 4;
@@ -90,7 +96,7 @@ namespace PyLearning
             // radio_c
             // 
             this.radio_c.AutoSize = true;
-            this.radio_c.Location = new System.Drawing.Point(12, 304);
+            this.radio_c.Location = new System.Drawing.Point(12, 445);
             this.radio_c.Name = "radio_c";
             this.radio_c.Size = new System.Drawing.Size(14, 13);
             this.radio_c.TabIndex = 5;
@@ -100,9 +106,11 @@ namespace PyLearning
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(372, 9);
+            this.label1.Location = new System.Drawing.Point(615, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 37);
             this.label1.TabIndex = 0;
@@ -110,10 +118,10 @@ namespace PyLearning
             // 
             // gabarito
             // 
-            this.gabarito.BackColor = System.Drawing.SystemColors.Control;
+            this.gabarito.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gabarito.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gabarito.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gabarito.Location = new System.Drawing.Point(12, 84);
+            this.gabarito.Location = new System.Drawing.Point(25, 170);
             this.gabarito.Name = "gabarito";
             this.gabarito.Size = new System.Drawing.Size(363, 128);
             this.gabarito.TabIndex = 6;
@@ -133,7 +141,7 @@ namespace PyLearning
             // 
             this.erro.AutoSize = true;
             this.erro.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.erro.Location = new System.Drawing.Point(25, 184);
+            this.erro.Location = new System.Drawing.Point(25, 261);
             this.erro.Name = "erro";
             this.erro.Size = new System.Drawing.Size(65, 28);
             this.erro.TabIndex = 8;
@@ -144,7 +152,7 @@ namespace PyLearning
             // 
             this.acer.AutoSize = true;
             this.acer.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.acer.Location = new System.Drawing.Point(25, 139);
+            this.acer.Location = new System.Drawing.Point(25, 220);
             this.acer.Name = "acer";
             this.acer.Size = new System.Drawing.Size(65, 28);
             this.acer.TabIndex = 9;
@@ -155,18 +163,32 @@ namespace PyLearning
             // 
             this.gab.AutoSize = true;
             this.gab.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gab.Location = new System.Drawing.Point(25, 96);
+            this.gab.Location = new System.Drawing.Point(25, 180);
             this.gab.Name = "gab";
             this.gab.Size = new System.Drawing.Size(65, 28);
             this.gab.TabIndex = 11;
             this.gab.Text = "label5";
             this.gab.Visible = false;
             // 
-            // Form4
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(852, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 165);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 401);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1113, 479);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gab);
             this.Controls.Add(this.acer);
             this.Controls.Add(this.erro);
@@ -179,8 +201,10 @@ namespace PyLearning
             this.Controls.Add(this.radio_a);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Name = "Form4";
+            this.Name = "Quiz";
             this.Text = "Form4";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +222,6 @@ namespace PyLearning
         private System.Windows.Forms.Label erro;
         private System.Windows.Forms.Label acer;
         private System.Windows.Forms.Label gab;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

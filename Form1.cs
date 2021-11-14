@@ -32,7 +32,7 @@ namespace PyLearning
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4 quiz = new Form4();
+            Quiz quiz = new Quiz();
             quiz.Show();
         }
 
@@ -47,5 +47,6 @@ namespace PyLearning
             Form6 tutorial = new Form6();
             tutorial.Show();
         }
+
     }
 }
