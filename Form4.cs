@@ -12,11 +12,12 @@ namespace PyLearning
 {
     public partial class Quiz : Form
     {
-        string[] questoes = { "1) Pergunta para que o comando print serve?",
+        string[] questoes = { 
+                              "1) O Comando Print tem que função?",
                               "2) Devemos sempre usar parênteses sempre que usar uma função print no Python?",
                               "3) O Recuo é importante na programação Python?",
                               "4) O que acontece se eu não usar recuo no Python?",
-                              "5) Os comentários em Python são escritos com um caractere especial, qual é esse caractere?",
+                              "5) Os comentários em uma única linha em Python são escritos com um caractere especial, qual é esse caractere?",
                               "6) Para fazer um comentário de múltiplas linhas ou multilinha eu preciso adicionar:",
                               "7) Marque a opção que contenha um tipo de variavel :",
                               "8) E possível diferenciar variáveis só mudando de letra minúscula e maiúscula?",
@@ -28,17 +29,16 @@ namespace PyLearning
                               "14) Para remover espaço em branco ao redor de texto utiliza-se:",
                               "15) Para substituir uma letra por outra em um texto utiliza-se:",
                               "16) O format(), pode ser usado para concatenar uma string com número?",
-                              "17) O recuo é importante para utilizamos a instrução if no Python?",
-                              "18) É permitido usar valores Booleanos para comparação em uma instrução if?",
-                              "19) o List no Python permite valores duplicados?",
-                              "20) A instrução elif é a forma de Python de dizer:",
-                              "21) A palavra-chave else captura qualquer coisa que não seja capturada pelas condições anteriores?",
-                              "22) A Tupla no Python permite valores duplicados?",
-                              "23) Não podemos colocar uma instrução if dentro de outra instrução if?",
+                              "17) É permitido usar valores Booleanos para comparação em uma instrução if?",
+                              "18) Python divide os operadores em quantos grupos ?",
+                              "19) A instrução elif é a forma de Python de dizer:",
+                              "20) A palavra-chave else captura qualquer coisa que não seja capturada pelas condições anteriores?",
+                              "21) Não podemos colocar uma instrução if dentro de outra instrução if?",
+                              ""
         };
 
         //matriz linha por coluna (linha = questoes, coluna = radio)
-        string[,] radio = new string[24,3] { { "Imprimir uma mensagem", "Copiar algo da tela", "" },
+        string[,] radio = new string[22,3] { { "Imprimir uma mensagem", "Copiar algo da tela", "Criar uma variável" },
                                             { "Verdadeiro",            "Falso",                "" },
                                             { "Verdadeiro",            "Falso",                "" },
                                             { "o python não responde", "da um erro no python", "Nenhuma das alternativas anteriores"},
@@ -54,16 +54,15 @@ namespace PyLearning
                                             { "replace",            "strip",                "split" },
                                             { "replace",            "strip",                "split" },
                                             { "Verdadeiro",            "Falso",                "" },
-                                            { "Verdadeiro",            "Falso",                "" },
                                             { "Verdadeiro",            "falso" ,                "" },
-                                            { "Verdadeiro",            "Falso",                "" },
-                                            { "Verdadeiro",            "Falso",                "" },
-                                            { "Verdadeiro",            "Falso",                "" },
+                                            {"5",                       "6",                   "7"},
                                             { "Se as condições anteriores não eram verdadeiras, tente esta condição",            "Se as condições anteriores não eram falsas, tente esta condição", "Se as condições anteriores eram verdadeiras, tente esta condição" },
                                             { "Verdadeiro",            "Falso",                "" },
-                                            { "Verdadeiro",            "Falso",                "" }};
+                                            { "Verdadeiro",            "Falso",                "" },
+                                            { "Verdadeiro",            "Falso",                "" }
+        };
 
-        int[] respostas = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        int[] respostas = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
         int counter = 0;
 
@@ -76,12 +75,12 @@ namespace PyLearning
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (counter == 23)
+            if (counter == 22)
             {
                 this.Close();
                 return;
             }
-
+        
 
             if (counter>0)
             {
@@ -123,8 +122,7 @@ namespace PyLearning
             
 
             if (counter == 1 || counter == 2 || counter == 3 || counter == 5 || counter == 6 || counter == 8 || counter == 9 || counter == 10 || counter == 11 ||
-                counter == 12|| counter == 15 || counter == 16 || counter == 17 || counter == 18 || counter == 19 || counter == 20 || counter == 21||
-                counter == 22 )
+                counter == 12|| counter == 15 || counter == 16 || counter == 17 || counter == 19 || counter == 20)
             {
                 if (radio_a.Checked)
                 {
@@ -136,7 +134,7 @@ namespace PyLearning
                     MessageBox.Show("Resposta errada");
                 }
             }
-            else if (counter == 4|| counter == 13|| counter == 14 || counter == 23)
+            else if (counter == 4|| counter == 13|| counter == 14 || counter == 21)
             {
                 if (radio_b.Checked)
                 {
@@ -192,16 +190,16 @@ namespace PyLearning
 
             counter++;
 
-            double porce = Math.Round(resp_ok/0.23);
+            double porce = Math.Round(resp_ok/0.21);
 
-
-            if (counter == 23)
+            
+            if (counter == 22)
             {
                 questao.Visible = false;
                 gab.Visible =true;
                 acer.Visible = true;
                 erro.Visible = true;
-                label1.Text = "Parabéns, você chegou ao fim do Quiz";
+                label1.Text = "Quiz Finalizado";
                 gab.Text = "A porcentagem de acertos foi:";
                 acer.Text = ("Acertos foram : " + porce + "%");
                 erro.Text = "Seus Erros : " + (100 - porce) + "%";
@@ -216,6 +214,11 @@ namespace PyLearning
         }
 
         private void questao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gabarito_TextChanged(object sender, EventArgs e)
         {
 
         }

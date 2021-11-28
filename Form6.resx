@@ -57,4 +57,379 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>                                                                                                                                                                                 *Começo Rápido*
+Python é uma linguagem de programação interpretada, o que significa que, como desenvolvedor, você escreve arquivos Python (.py) em um editor de texto e, em seguida, coloca esses arquivos no interpretador Python para serem executados.
+
+A maneira de executar um arquivo Python é assim:
+C: \ Usuários \ “Seu nome”&gt; python olamundo.py
+Onde "olamundo.py" é o nome do seu arquivo Python.
+Vamos escrever nosso primeiro arquivo Python, chamado olamundo.py, que pode ser feito em qualquer editor de texto:
+print ("Olá, Mundo!")
+Simples assim. Salve seu arquivo. Abra sua linha de comando, navegue até o diretório onde você salvou o arquivo e execute deve sair: Olá Mundo!
+Parabéns, você escreveu e executou seu primeiro programa Python.
+Para testar uma pequena quantidade de código em Python, às vezes é mais rápido e fácil não escrever o código em um arquivo. Isso é possível porque o Python pode ser executado como uma linha de comando.
+Digite o seguinte na linha de comando do Windows, Mac ou Linux:
+C: \ Usuários \ Seu nome&gt; python
+Ou, se o comando "python" não funcionar, você pode tentar "py":
+C: \ Usuários \ Seu nome&gt; py
+A partir daí, você pode escrever qualquer Python, incluindo nosso exemplo olá mundo no início do tutorial: print ("Olá, Mundo!"), que respondera "Olá, mundo!" na linha de comando. Sempre que terminar na linha de comando do Python, você pode simplesmente digitar o seguinte para sair da interface: exit()
+
+Execute a sintaxe Python
+Como aprendemos anteriormente, a sintaxe Python pode ser executada escrevendo diretamente na linha de comando: print ("Olá, mundo!") que responderá Olá Mundo, ou criando um arquivo python no servidor, usando a extensão de arquivo .py e executando-o na linha de comando: C: \ Usuários \ Seu nome&gt; .py
+
+1 - Comentários Python
+Os comentários podem ser usados para explicar o código Python, tornando o código mais legível, também podem ser usados para evitar a execução ao testar o código, os comentários começam com # e o Python irá ignorá-los.
+Exemplo:
+#Isto é um comentário
+print("Olá, Mundo!")
+Retorno:
+Olá, Mundo!
+Ou, não exatamente como pretendido, você pode usar um fragmento de multilinha, o Python irá ignorar esse fragmento que não são atribuídos a uma variável, você pode adicionar usando aspas triplas em seu código e colocar seu comentário dentro dela. 
+Exemplo:
+"" "
+Isto é um comentário
+escrito em
+mais do que apenas uma linha
+"" "
+print("Olá, Mundo!")
+Retorno:
+Olá, Mundo!
+
+2 - Entrada e saída Python
+O método print() serve para imprimir os argumentos passados a ela no terminal. Sem usar ().
+Exemplo:
+print("Olá, Mundo!")
+Retorno:
+Olá, Mundo!
+
+O método input() faz uma pausa no programa e espera uma entrada do usuário pelo terminal
+Exemplo:
+resposta = input("O que é o Python?") # resposta: Linguagem de Programação
+Retorno:
+Linguagem de Programação
+
+3 - Tipos de Dados/Variáveis
+
+Exemplos:						Tipo de dado
+x= “Olá Mundo” 					str
+x= 10							int
+x=10.5							float
+x= 10g							complex
+x= [“Maça”, “Banana”, “Mamão”]			list
+x= (“Maça”, “Banana”, “Mamão”)			tuple
+x= range(6)						range
+x= {“nome” : “Marcos”, “idade” : 42} 		dict
+x= {“Maça”, “Banana”, “Mamão”}			set
+x= frozenset({“Maça”, “Banana”, “Mamão”})	fronzenset
+x= Verdadeiro						bool
+x= b “Ola”						bytes
+x= bytearray(5)					bytearray
+x= memoryview(bytes(5))				memoryview
+Conversão de Tipo, você pode converter de um tipo para outro com os métodos int(),
+float() e str(), converter de um tipo para outro:
+Exemplo:
+a = 1
+b = “1”
+c = 2.0
+print(str(a))
+print(float(b))
+print(int(c))
+Retorno:
+“1”
+ 1.0
+ 2
+
+
+4 - Declaração de Variáveis 
+
+A atribuição de uma variável é feita com o nome da variável, seguido por um sinal de igual e o dado. Nomes de variáveis diferenciasse de maiúscula e minúscula (a variável a é diferente de variável A). Não podendo ter palavras reservadas da linguagem, como: print, input, entre outras. 
+Exemplo:
+a = "Olá"
+A = 1
+c = True
+Os textos em python são colocados entre aspas simples ou aspas duplas.
+Exemplo:
+a = "Olá" 
+b = ‘Olá’
+
+Você pode atribuir um texto há multilinha a uma variável usando três aspas:
+Exemplo:
+a = “”” Essa é uma frase com
+ muitas linhas para de exemplo
+ de como funciona. “””
+
+print(a)
+Retorno:
+Essa é uma frase com  muitas linhas para de exemplo de como funciona. 
+
+
+
+
+
+5 - Variáveis global Python
+	
+Normalmente, quando você cria uma variável dentro de uma função, essa variável é local e só pode ser usada dentro dessa função, para criar uma variável global dentro de uma função, você pode usar a palavra-chave.
+Exemplo:
+def myfunc():
+   global x
+   x = "fantástico"
+myfunc()
+print ("Python é" + x)
+Retorno:
+Python é fantástico
+
+6 - Manipulação de string 
+
+Você pode retornar um intervalo de caracteres usando a sintaxe de fatia. Especifique o índice inicial e o índice final, separados por dois pontos, para retornar uma parte do texto.
+Exemplo:
+# Obtenha os caracteres da posição 2 à posição 5 (não incluído):
+b = "Olá, mundo!"
+print(b[5: 10])
+Retorno:
+mundo 
+
+Ao omitir o índice inicial, o intervalo começará no primeiro caractere. 
+Exemplo:
+b = "Olá, mundo!"
+print(b[: 3])
+Retorno:
+Olá 
+
+Ao omitir o índice final, o intervalo irá para o final. Exemplo
+Exemplo:
+b = "Olá, mundo!"
+print(b[5: 10])
+Retorno:
+mundo! 
+
+O método upper() retorna o texto em letras maiúscula:
+Exemplo:
+a = "Olá, mundo!"
+print(a.upper())
+Retorno:
+OLÁ, MUNDO! 
+
+O método lower() retorna o texto em letras minúsculas:
+Exemplo:
+a = "Olá, mundo!"
+print(a.lower())
+Retorno:
+olá, mundo!
+
+O método strip() remove qualquer espaço em branco do início ou do final:
+Exemplo:
+a = " Olá, Mundo! "
+print(a.strip()) 
+Retorno:
+Olá, Mundo!
+
+O método replace() substitui uma parte específica por outra letra.
+Exemplo:
+a = "Olá, mundo!"
+print (a.replace("Olá", "Oi"))
+Retorno:
+Oi, Mundo!
+O método split () divide um texto em subtextos se encontrar instâncias do separador:
+Exemplo:
+a = "Olá, mundo!"
+print (a.split (","))
+Retorno:
+['Olá', 'Mundo!']
+
+7 - Formato de texto
+Para conectar ou combinar dois textos, você pode usar o operador +. Exemplo
+Exemplo:
+a = "Olá"
+b = "Mundo!"
+c = a + b
+print(c)
+Retorno:
+Olá, Mundo!
+
+O método format () pega os argumentos passados, formata-os e os coloca no texto onde os marcados {} são. 
+Exemplo:
+idade = 36
+txt = "Meu nome é John e tenho {} anos"
+print(txt.format (idade))
+Retorno:
+Meu nome é John e tenho 36 anos
+
+Caracteres de escape usados ​​em Python:
+Código							Resultado
+\'							Citação única
+\\							Barra invertida
+\n							Nova linha
+\r							Retorno do recuo 
+\t							Tab
+\b							Backspace
+\f							Formar de formulário
+\ooo							Valor octal
+\xhh							Valor hexagonal
+
+8 - Valores Booleanos
+Na programação, você geralmente precisa saber se uma expressão é verdadeira ou falsa, você pode avaliar qualquer expressão em Python e obter uma das duas respostas, verdadeiro ou falso, quando você compara dois valores, a expressão é avaliada e o Python retorna a resposta booleana. 
+Exemplo:
+print(10 &gt; 9)
+print(10 == 9)
+print(10 &lt; 9)
+Retorno:
+True
+False
+False
+
+
+
+
+9 - Operadores Lógicos em python
+
+Operadores são usados para realizar operações em variáveis e valores.
+No exemplo abaixo, usamos o operador + para somar dois valores.
+Exemplo
+print(10 + 5)
+
+Python divide os operadores nos seguintes grupos:
+Operadores aritméticos
+Operadores de atribuição
+Operadores de comparação
+Operadores lógicos
+Operadores de identidade
+Operadores de associação
+Operadores bit a bit
+
+                                             Operadores aritméticos Python
+Operadores aritméticos são usados com valores numéricos para realizar          operações matemáticas comuns:
+Operador			Nome					Exemplo
++				Adição					x+y
+-				Subtração				x-y
+*				Multiplicação				x*y
+/				Divisão					x/y
+%				Módulo				x%y
+**				Exponenciação			x**y
+//				Divisão de piso			x//y
+
+Operadores de atribuição Python
+Operadores de atribuição são usados para atribuir valores a variáveis.
+
+Operador				Exemplo			Igual à
+=					x=5				x=5
++=					x+=3				x=x+3
+-=					x-=3				x=x-3
+*=					x*=3				x=x*3
+/=					x/=3				x=x/3	
+
+
+Operadores de comparação Python
+Operadores de comparação são usados para comparar dois valores.
+
+Operador			Nome			 		Exemplo
+==				Igual					x==y
+!=				Não igual				x!=y
+	&gt;				Maior que				x&gt;y
+	&lt;				Menor que				x&lt;y
+	&gt;=				Maior ou igual				x&gt;=y
+	&lt;=				Menor ou igual			x&lt;=y
+
+	Operadores lógicos Python
+Operadores lógicos são usados para combinar declarações condicionais:
+
+	Operador			Descrição				Exemplo
+and			Retorna verdadeiro se			x&lt;5 and x&lt;10
+			 ambas as afirmações forem
+			verdadeiras
+
+or			Retorna verdadeiro se uma			x&lt;5 ou x&lt;4
+			das afirmações for verdadeira
+
+not			Reverte o resultado, retornado  	        not(x&lt;5andx&lt;10)
+			falso se o resultado for verdadeiro	
+
+
+Operadores de identidade Python
+Operadores de identidade são usados para comparar os objetos, não se eles forem iguais, mas se eles forem realmente o mesmo objeto, com o mesmo local de memória.
+
+Operador			Descrição				Exemplo
+Is				Retorna verdadeiro se		x is y
+				ambas as variáveis forem o
+				mesmo objeto
+
+is not				Retorna verdadeiro se		x is not y
+				ambas as variáveis não forem
+				o mesmo objeto	
+
+Operadores de associação Python
+Operadores de associação são usados para testar se uma sequência é apresentada em um objeto.
+
+Operador 			Descrição				Exemplo
+in				Retorna verdadeiro se		x in y
+				uma sequência com o 
+				valor especificado estiver
+				presente no objeto
+
+not in 				Retorna verdadeiro se uma		x not in y
+				sequência com o valor 
+				especificador não estiver
+				presente no objeto
+
+
+Operadores bit a bit Python
+Operadores bit a bit são usados para comparar números (binários).
+
+Operador 	Nome 				Descrição
+&amp;		AND		Define cada bit como 1 se ambos os bits forem 1
+|		OR		Define cada bit como 1 se um dos dois bits for 1
+^		XOR		Define cada bit como 1 se apenas um dos dois bits for 1
+~		NOT		Inverte todos os bits
+&lt;&lt; 		Zero		Desloque para a esquerda empurrando zeros da direita e 
+preenchimento 	               deixe os pedaços mais à esquerda caírem
+deslocamento
+para a esquerda
+
+&gt;&gt;		Turno 		Desloque para a direita empurrando cópias do bit mais à 
+à direita	esquerda da esquerda e deixe os bits mais à direita caírem
+assinado
+
+
+10 - Recuo Python
+O recuo refere-se aos espaços no início de uma linha de código. Enquanto em outras linguagens de programação o recuo no código é apenas para legibilidade, o recuo em Python é muito importante  e apresentará um erro se não tiver. O número de espaços depende de você como programador, mas deve ser pelo menos um e você deve usar o mesmo número de espaços no mesmo bloco de código, caso contrário, o Python apresentará um erro.
+Exemplo:
+              a = 10
+              b = 5
+if a &gt;= b:
+     print(“Dez é maior e igual a Cinco!”)
+Retorno:
+Dez é maior e igual a Cinco!
+
+11 - If ... Else
+
+
+Em python tem o comando if/else é uma estrutura condicional utilizada para executar um bloco de código se uma determinada condição for verdadeira e executar outro conjunto de instruções caso ela seja falsa. Podendo colocar uma instrução if dentro de outra instrução if.
+Exemplo:
+              a = 10
+              b = 5
+if a == b:
+     print(“Dez é  igual a Cinco!”)
+else:
+     print(“Dez não é igual a Cinco!”)
+	
+Retorno:
+Dez é maior e igual a Cinco!
+
+Elif
+O comando elif é utilizado quando queremos realizar a verificação de outra expressão caso a primeira validação seja falsa. 
+
+
+Exemplo
+a = 33
+b = 33
+if b&gt; a:
+   	print("b é maior que a")
+elif a == b:
+print("a e b são iguais")
+Retorno:
+a e b são iguais</value>
+  </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

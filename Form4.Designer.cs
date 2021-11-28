@@ -48,6 +48,7 @@ namespace PyLearning
             // radio_a
             // 
             this.radio_a.AutoSize = true;
+            this.radio_a.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radio_a.Location = new System.Drawing.Point(12, 365);
             this.radio_a.Name = "radio_a";
             this.radio_a.Size = new System.Drawing.Size(14, 13);
@@ -59,6 +60,7 @@ namespace PyLearning
             // radio_b
             // 
             this.radio_b.AutoSize = true;
+            this.radio_b.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radio_b.Location = new System.Drawing.Point(12, 405);
             this.radio_b.Name = "radio_b";
             this.radio_b.Size = new System.Drawing.Size(14, 13);
@@ -72,7 +74,7 @@ namespace PyLearning
             this.questao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.questao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.questao.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.questao.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.questao.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.questao.Location = new System.Drawing.Point(25, 170);
             this.questao.Name = "questao";
             this.questao.ReadOnly = true;
@@ -96,6 +98,7 @@ namespace PyLearning
             // radio_c
             // 
             this.radio_c.AutoSize = true;
+            this.radio_c.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radio_c.Location = new System.Drawing.Point(12, 445);
             this.radio_c.Name = "radio_c";
             this.radio_c.Size = new System.Drawing.Size(14, 13);
@@ -121,12 +124,13 @@ namespace PyLearning
             this.gabarito.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gabarito.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gabarito.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gabarito.Location = new System.Drawing.Point(25, 170);
+            this.gabarito.Location = new System.Drawing.Point(483, 189);
             this.gabarito.Name = "gabarito";
             this.gabarito.Size = new System.Drawing.Size(363, 128);
             this.gabarito.TabIndex = 6;
             this.gabarito.Text = "";
             this.gabarito.Visible = false;
+            this.gabarito.TextChanged += new System.EventHandler(this.gabarito_TextChanged);
             // 
             // acerto
             // 
@@ -141,7 +145,7 @@ namespace PyLearning
             // 
             this.erro.AutoSize = true;
             this.erro.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.erro.Location = new System.Drawing.Point(25, 261);
+            this.erro.Location = new System.Drawing.Point(483, 289);
             this.erro.Name = "erro";
             this.erro.Size = new System.Drawing.Size(65, 28);
             this.erro.TabIndex = 8;
@@ -152,7 +156,7 @@ namespace PyLearning
             // 
             this.acer.AutoSize = true;
             this.acer.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.acer.Location = new System.Drawing.Point(25, 220);
+            this.acer.Location = new System.Drawing.Point(483, 245);
             this.acer.Name = "acer";
             this.acer.Size = new System.Drawing.Size(65, 28);
             this.acer.TabIndex = 9;
@@ -163,7 +167,7 @@ namespace PyLearning
             // 
             this.gab.AutoSize = true;
             this.gab.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gab.Location = new System.Drawing.Point(25, 180);
+            this.gab.Location = new System.Drawing.Point(483, 201);
             this.gab.Name = "gab";
             this.gab.Size = new System.Drawing.Size(65, 28);
             this.gab.TabIndex = 11;
