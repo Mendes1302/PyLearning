@@ -58,7 +58,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>                                                                                                                                                                                 *Começo Rápido*
+    <value>                                                                                                                                                                                  Começo Rápido 
 Python é uma linguagem de programação interpretada, o que significa que, como desenvolvedor, você escreve arquivos Python (.py) em um editor de texto e, em seguida, coloca esses arquivos no interpretador Python para serem executados.
 
 A maneira de executar um arquivo Python é assim:
